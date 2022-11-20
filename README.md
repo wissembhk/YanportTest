@@ -5,7 +5,7 @@ A fin de tester ce projet tu peux choisir entre plusieurs méthode
 
 ## Tester le Projet sur un contenaire
 
-1- Vous pouvez aussi télécharger les deux images du docer hub:
+1- Vous pouvez aussi télécharger les deux images du docker hub:
  #### image angular : https://hub.docker.com/repository/docker/wissembhk/yanport_angular : docker pull wissembhk/yanport_angular
  #### image spring : https://hub.docker.com/repository/docker/wissembhk/yanport_spring : docker pull wissembhk/yanport_spring
 

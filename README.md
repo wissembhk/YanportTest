@@ -9,33 +9,28 @@ A fin de tester ce projet tu peux choisir entre plusieurs méthode
 
 #### `1.1 acceder au dossier Yanport/YanportFront
 #### `1.2 npm install`
-#### `1.2 ng build ou npm run ng build`
-#### `1.3 acceder au dossier Yanport/spring`
-#### `1.4 mvn clean`
-#### `1.5 mvn install`
-#### `1.6 acceder au dossier Yanport`
-#### `1.7 docker-compose up -d `
-#### `1.8 tester lapplication en visitant http://localhost:4200/yanport-front/`
+#### `1.3 ng build ou npm run ng build`
+#### `1.4 acceder au dossier Yanport/spring`
+#### `1.5 mvn clean`
+#### `1.6 mvn install`
+#### `1.7 acceder au dossier Yanport`
+#### `1.8 docker-compose up -d `
+#### `1.9 tester lapplication en visitant http://localhost:4200/yanport-front/`
+remarque : il vous faut openjdk version 11 & npm 8 & node 19
 
+2-Pour lancer directement le projet sans contenaire il faut : 
 
+#### `2.1 acceder au dossier Yanport/YanportFront
+#### `2.2 npm install`
+#### `2.3 ng serve ou npm run ng serve`
+#### `2.4 acceder au dossier Yanport/spring`
+#### `2.5 mvn clean`
+#### `2.6 mvn install`
+#### `2.7 java -jar target/YanportTest-1.0.jar`
+#### `2.8 tester lapplication en visitant http://localhost:4200/yanport-front/`
+remarque : il vous faut openjdk version 11 & npm 8 & node 19
 
-
-
-
-
-
-Pour 
-### `3.npm start`
-
-Once everything is ok you are ready to go , simply run <b> npm start </b> command to start the project
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-## Future improvements
- - Improve the ux/ui part of the project especially on the computer version
- - Implements tests
-
-## Feedback
-
-I would really want to thank MVST. team for this test because it was my first time to face two of my weak points which are working
-with graphQL (this test was my first experience) and React Ts ( I was always using Js with React and Ts with angular )
-So this test represented an opportunity for me to try new things.
+3- Vous pouvez aussi télécharger les deux images du docer hub:
+ #### image angular : https://hub.docker.com/repository/docker/wissembhk/yanport_angular
+ #### image spring : https://hub.docker.com/repository/docker/wissembhk/yanport_spring
+ L'application se lancera sur le port 4200 pour l'angular et 8089 pour le spring

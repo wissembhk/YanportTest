@@ -19,7 +19,7 @@ A fin de tester ce projet tu peux choisir entre plusieurs méthode
 #### `2.6 mvn install`
 #### `2.7 acceder au dossier Yanport`
 #### `2.8 docker-compose up -d `
-#### `2.9 tester lapplication en visitant http://localhost:4200/yanport-front/`
+#### `2.9 tester l'application en visitant http://localhost:4200/yanport-front/`
 remarque : il vous faut openjdk version 11 & npm 8 & node 19
 
 ## Tester le Projet directement

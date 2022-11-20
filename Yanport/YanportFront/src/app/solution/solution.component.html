@@ -1,0 +1,98 @@
+<div class="container">
+    <form class="m-auto" style="max-width:60%" #loginForm="ngForm">
+
+        <h3 class="my-4 text-light">Entrer les différents valeurs</h3>
+        <hr class="my-4" />
+        <div class="d-flex flex-column flex-lg-row">
+            <div class="form-group mb-3 column "><label for="xgrille"
+                    class="col-md-5 fw-bold col-form-label text-light">
+                    Largeur de grille (x)</label>
+
+                <div class="col-md-7"><input min="1" placeholder="Largeur grille" [(ngModel)]="inputdata.x"
+                        type="number" class="form-control form-control-lg" id="xgrille" name="xgrille" required></div>
+            </div>
+
+            <div class="form-group mb-3 column"><label for="ygrille" class="text-light fw-bold col-md-5 col-form-label">
+                    Longeur de grille (y) </label>
+                <div class="col-md-7"><input placeholder="Longeur grille" min="1" [(ngModel)]="inputdata.y"
+                        type="number" class="form-control form-control-lg" id="ygrille" name="ygrille" required></div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column flex-lg-row">
+            <div class="form-group mb-3 column"><label for="initialX"
+                    class="text-light fw-bold col-md-5 col-form-label">
+                    Abscisse initiale de l'aspirateur (x) </label>
+                <div class="col-md-7"><input placeholder="Abscisse initiale" [(ngModel)]="inputdata.initialX"
+                        type="number" class="form-control form-control-lg" id="initialX" name="initialX" required>
+                    <div *ngIf="(inputdata.initialX>inputdata.x || inputdata.initialX<1)" class="text-danger"> abscisse
+                        initial
+                        invalide
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="form-group mb-3 column "><label for="yinit" class="text-light fw-bold col-md-5 col-form-label">
+                    Ordonnée initial de l'aspirateur (y) </label>
+                <div class="col-md-7"><input placeholder="Ordonnée initiale" [(ngModel)]="inputdata.initialY"
+                        type="number" class="form-control form-control-lg" id="yinit" name="yinit" required>
+                    <div *ngIf="(inputdata.initialY>inputdata.y || inputdata.initialY<1)" class="text-danger"> ordonnée
+                        initial
+                        invalide
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group mb-3 column input"><label for="orientation" class="text-light fw-bold col-form-label">
+                Orientation initial de l'aspirateur </label>
+            <div class="col-md-7">
+
+                <select name="orientation" id="orientation" class="form-control form-control-lg"
+                    [(ngModel)]="inputdata.orientation">
+                    <option value="0">Nord</option>
+                    <option value="1">Est</option>
+                    <option value="2">Sud</option>
+                    <option value="3">Ouest</option>
+                </select>
+
+
+            </div>
+        </div>
+
+        <div class="form-group mb-3 column input"><label for="orientation"
+                class="text-light fw-bold col-md-5 col-form-label">
+                Instructions </label>
+            <div class="col-md-7"><input placeholder="Instructions" [(ngModel)]="inputdata.instructions" type="text"
+                    class="form-control form-control-lg" id="instructions" name="instructions"
+                    (keypress)="validateinstructions()" required>
+                <div *ngIf="error!=''" class="text-danger">
+                    {{error}}
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="my-4" />
+        <div *ngIf="outputdata.x==null" class="form-group mb-3 text-center row"><label for=""
+                class="text-light col-md-5 col-form-label"></label>
+
+            <div class="col-md-7"><button [disabled]="loginForm.invalid" class="btn btn-primary btn-lg" type="submit"
+                    (click)="AddClient()">Calculer</button></div>
+        </div>
+
+        <div *ngIf="outputdata.error" class="text-danger fs-1 text-center fw-bold">
+            {{outputdata.error}}
+        </div>
+        <div *ngIf="outputdata.error==null && outputdata.x" class=" d-flex result fs-6   justify-content-between">
+            <p class="m-2">
+                l'aspirateur est dans la position:<br> x = {{outputdata.x}}<br> y = {{outputdata.y}} <br>orientation:
+                {{outputdata.orientation}}
+            </p>
+            <button class="h-25 m-3 btn btn-danger" (click)="reset()">Recalculer</button>
+        </div>
+
+
+    </form>
+</div>

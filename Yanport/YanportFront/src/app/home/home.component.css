@@ -1,0 +1,25 @@
+.l-container {
+    width: 40%;
+    min-height: 100vh;
+    margin-top: 3%;
+}
+
+.title {
+    font-size: 4rem;
+}
+
+.r-container {
+    width: 60%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .l-container {
+        width: 100%;
+        margin-top: 0%;
+    }
+
+    .r-container {
+        width: 100%;
+    }
+}

@@ -16,6 +16,6 @@ export class MyserviceService {
   }
   Calcul(input: inputModel): Observable<outputModel> {
     const body = JSON.stringify(input);
-    return this.http.post<outputModel>('localhost:8089/test', body, this.httpOptions)
+    return this.http.post<outputModel>('http://localhost:8089/test', body, this.httpOptions)
   }
 }

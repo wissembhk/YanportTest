@@ -1,0 +1,66 @@
+<div class="container">
+    <form class="m-auto" style="max-width:60%" #loginForm="ngForm">
+
+        <h3 class="my-4 text-light">Entrer les différents valeurs</h3>
+        <hr class="my-4" />
+        <div class="form-group mb-3 row"><label for="xgrille" class="col-md-5 col-form-label text-light">
+                Largeur de grille (x)</label>
+
+            <div class="col-md-7"><input [(ngModel)]="inputdata.x" type="number" class="form-control form-control-lg"
+                    id="xgrille" name="xgrille" required></div>
+        </div>
+
+        <div class="form-group mb-3 row"><label for="ygrille" class="text-light col-md-5 col-form-label">
+                Longeur de grille (y) </label>
+            <div class="col-md-7"><input [(ngModel)]="inputdata.y" type="number" class="form-control form-control-lg"
+                    id="ygrille" name="ygrille" required></div>
+        </div>
+
+        <div class="form-group mb-3 row"><label for="initialX" class="text-light col-md-5 col-form-label">
+                Abscisse initial de l'aspirateur (x) </label>
+            <div class="col-md-7"><input [(ngModel)]="inputdata.initialX" type="number"
+                    class="form-control form-control-lg" id="initialX" name="initialX" required>
+                <div *ngIf="(inputdata.initialX>inputdata.x || inputdata.initialX<1)" class="text-light"> abscisse
+                    initial
+                    invalide
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="form-group mb-3 row"><label for="yinit" class="text-light col-md-5 col-form-label">
+                ordonnée initial de l'aspirateur (y) </label>
+            <div class="col-md-7"><input [(ngModel)]="inputdata.initialY" type="number"
+                    class="form-control form-control-lg" id="yinit" name="yinit" required>
+                <div *ngIf="(inputdata.initialY>inputdata.y || inputdata.initialY<1)" class="text-light"> ordonnée
+                    initial
+                    invalide
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group mb-3 row"><label for="orientation" class="text-light col-md-5 col-form-label">
+                orientation initial de l'aspirateur </label>
+            <div class="col-md-7"><input [(ngModel)]="inputdata.orientation" type="text"
+                    class="form-control form-control-lg" id="orientation" name="orientation" required></div>
+        </div>
+
+        <div class="form-group mb-3 row"><label for="orientation" class="text-light col-md-5 col-form-label">
+                instructions </label>
+            <div class="col-md-7"><input [(ngModel)]="inputdata.instructions" type="text"
+                    class="form-control form-control-lg" id="instructions" name="instructions" required></div>
+        </div>
+
+        <hr class="my-4" />
+        <div class="form-group mb-3 row"><label for="" class="text-light col-md-5 col-form-label"></label>
+
+            <div class="col-md-7"><button [disabled]="loginForm.invalid" class="btn btn-primary btn-lg" type="submit"
+                    (click)="AddClient()">Calculer</button></div>
+        </div>
+
+
+
+
+    </form>
+</div>

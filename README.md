@@ -20,7 +20,7 @@ A fin de tester ce projet tu peux choisir entre plusieurs méthode
 #### `2.7 acceder au dossier Yanport`
 #### `2.8 docker-compose up -d `
 #### `2.9 tester l'application en visitant http://localhost:4200/yanport-front/`
-remarque : il vous faut openjdk version 11 & npm 8 & node 19
+remarque : il vous faut mvn 3.6 & npm 8.19 & node 19
 
 ## Tester le Projet directement
 
@@ -34,7 +34,7 @@ remarque : il vous faut openjdk version 11 & npm 8 & node 19
 #### `3.6 mvn install`
 #### `3.7 java -jar target/YanportTest-1.0.jar`
 #### `3.8 tester lapplication en visitant http://localhost:4200/yanport-front/`
-remarque : il vous faut openjdk version 11 & npm 8 & node 19
+remarque : il vous faut openjdk version 11 & mvn 3,6 & npm 8 & node 19
 
 
  L'application se lancera sur le port 4200 pour l'angular et 8089 pour le spring

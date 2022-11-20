@@ -38,3 +38,4 @@ remarque : il vous faut openjdk version 11 & npm 8 & node 19
 
 
  L'application se lancera sur le port 4200 pour l'angular et 8089 pour le spring
+![image](https://user-images.githubusercontent.com/58009610/202931669-3cd9f7dc-d710-4514-8133-ce0af3726c27.png)
